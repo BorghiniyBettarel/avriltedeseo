@@ -1,0 +1,115 @@
+/* Definición de fuentes */
+@font-face {
+    font-family: "Kissing Season";
+    src: url("fuentes/Kissing Season.ttf");
+}
+@font-face {
+    font-family: "Quenda-Medium";
+    src: url("fuentes/Quenda-Medium.otf");
+}
+
+html, body {
+    height: 100%; /* Asegura que el body ocupe toda la altura */
+    margin: 0; /* Elimina márgenes por defecto */
+    box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit; /* Aplica box-sizing a todos los elementos */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffb3d9; /* Fondo rosa */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Oculta el desbordamiento */
+}
+
+h1 {
+    font-family: 'Kissing Season', cursive;
+    color: #e63946;
+    margin-bottom: 1px; /* Reduce el margen inferior para acercar el título a la imagen */
+}
+
+
+#imageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.special-image {
+    max-width: 300px;
+    cursor: pointer;
+    transition: transform 0.5s;
+    position: relative; /* Asegura que pueda transformarse */
+}
+
+.love-text {
+    font-size: 21px;
+    color: #e63946;
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+    font-family: "Quenda-Medium", cursive;
+    position: relative; /* Asegura que pueda transformarse */
+    text-align: justify; /* Justifica el texto */
+    
+    /* Estilos para el cuadrado */
+    width: 70%; /* Ancho del cuadrado */
+    height: 85%; /* Alto del cuadrado */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con algo de transparencia */
+
+    display: flex; /* Usar flexbox para centrar el texto */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    padding: 15px; /* Espaciado interno */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; /* Oculta el desbordamiento */
+}
+
+.hidden {
+    display: none;
+}
+
+.love-text p {
+    margin: 5px 0; /* Reduce el margen superior e inferior del párrafo */
+}
+
+.button {
+    display: inline-block;
+    background-color: #f1faee;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    margin-top: 5px; /* Reduce el margen superior para acercar el botón a la imagen */
+}
+
+.button:hover {
+    background-color: #a8dadc;
+}
+
+/* Media Queries */
+@media (max-width: 400px) {
+    #imageContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .special-image {
+        transform: translateX(-5px); /* Mueve la imagen hacia arriba */
+    }
+
+   
+}

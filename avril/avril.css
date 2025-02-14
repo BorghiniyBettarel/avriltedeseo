@@ -1,0 +1,103 @@
+@font-face {
+    font-family: "Pacifico"; /* Nombre que usarás para referenciar la fuente */
+    src: url("fuentes/Pacifico.ttf");
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffb3d9; /* Fondo rosa */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 600px; /* Ancho fijo */
+    height: 400px; /* Alto fijo */
+    transition: transform 0.3s;
+}
+
+.container:hover {
+    transform: scale(1.02); /* Efecto de zoom al pasar el mouse */
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.image-container img {
+    max-width: 100%;
+    max-height: 100%; /* Asegura que la imagen no exceda el alto del contenedor */
+    border-radius: 10px;
+}
+
+.text-container {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1 {
+    font-family: "Pacifico", cursive; /* Tipografía cursiva */
+    color: #e63946;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.button {
+    display: inline-block;
+    background-color: #f1faee;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #a8dadc;
+}
+
+.hidden {
+    display: none;
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #457b9d;
+}
+
+/* Animaciones */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+}
